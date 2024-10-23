@@ -1,0 +1,5 @@
+SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c '\
+    chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio;\
+    chown -R root:gpio /sys/devices/6000d000.gpio/gpiochip0 && chmod -R 770 /sys/devices/6000d000.gpio/gpiochip0;\
+    chown -R root:gpio /sys/devices/2200000.gpio/gpiochip1 && chmod -R 770 /sys/devices/2200000.gpio/gpiochip1;\
+    chown -R root:gpio /sys/devices/c2f0000.gpio/gpiochip2 && chmod -R 770 /sys/devices/c2f0000.gpio/gpiochip2;'"
